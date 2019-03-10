@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Oswald';
+  src: local('Oswald Bold'),
+       local('Oswald-Bold'),
+       url('Oswald-Bold.woff2') format('woff2'),
+       url('Oswald-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin oswald {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'),
+       local('Roboto-Bold'),
+       url('Roboto-Bold.woff2') format('woff2'),
+       url('Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin roboto-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}

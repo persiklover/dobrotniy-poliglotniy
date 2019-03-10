@@ -16,9 +16,15 @@ a
 
 .visually-hidden
   position: absolute
-  clip: rect(0 0 0 0)
   width: 1px
   height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
 
 .container
   max-width: 1170px
@@ -38,6 +44,8 @@ html
   font-size: 10px
 
 body
+  background-color: #f0eff7
   font-size: 1.8rem
+  color: #15081e
   min-width: 320px
   overflow-x: hidden
