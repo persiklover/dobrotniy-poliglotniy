@@ -403,6 +403,7 @@ body {
   align-items: center;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  font-size: 1.8rem;
   color: #2a16a7;
   letter-spacing: 0.105rem;
 }
@@ -425,8 +426,8 @@ body {
 
 .header-info__icon {
   max-width: 100%;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 1.5em;
+  height: 1.5em;
   margin-right: 1rem;
 }
 
@@ -504,6 +505,7 @@ body {
     -ms-flex-align: center;
     align-items: center;
     margin-top: 2.5rem;
+    font-size: 1.6rem;
   }
 }
 
