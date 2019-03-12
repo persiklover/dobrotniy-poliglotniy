@@ -365,14 +365,12 @@ a {
 }
 
 .btn {
-  background: -webkit-gradient(linear, left top, left bottom, from(#6ade4b), to(#10ae50));
-  background: -webkit-linear-gradient(#6ade4b, #10ae50);
-  background: -o-linear-gradient(#6ade4b, #10ae50);
-  background: linear-gradient(#6ade4b, #10ae50);
+  background: #10ae50;
   border: none;
   padding: 2.5rem 6rem;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  font-size: 1.6rem;
   color: white;
   letter-spacing: .1rem;
   cursor: pointer;
@@ -381,13 +379,9 @@ a {
   transition: .3s ease;
 }
 
-.btn:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#7ce261), to(#12c55b));
-  background: -webkit-linear-gradient(#7ce261, #12c55b);
-  background: -o-linear-gradient(#7ce261, #12c55b);
-  background: linear-gradient(#7ce261, #12c55b);
-  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+.btn:hover,
+.btn:focus {
+  background: #12c55b;
 }
 
 html {
@@ -397,6 +391,8 @@ html {
 body {
   background-color: #f0eff7;
   font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   color: #15081e;
   min-width: 320px;
   overflow-x: hidden;
@@ -408,6 +404,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
+  color: #300d49;
 }
 
 .header-wrap {
@@ -438,8 +435,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 1.8rem;
-  color: #2a16a7;
-  letter-spacing: 0.105rem;
+  letter-spacing: 0.02rem;
 }
 
 .header-info__link {
@@ -462,6 +458,7 @@ body {
   max-width: 100%;
   width: 1.5em;
   height: 1.5em;
+  margin-top: .1rem;
   margin-right: 1rem;
 }
 
@@ -470,14 +467,13 @@ body {
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
-  color: #300d49;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   letter-spacing: -.02rem;
 }
 
 .logo__company-name {
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.4em;
 }
 
 .home {
@@ -495,7 +491,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(240, 239, 247, 0.55);
+  background: rgba(240, 239, 247, 0.45);
 }
 
 .home-wrap {
@@ -527,16 +523,17 @@ body {
 }
 
 .home-text__title strong {
-  color: #aa151b;
+  color: #c62828;
 }
 
 .home-text__subtitle {
   display: inline-block;
-  padding: .2rem 1rem;
-  background-color: #beb9e1;
+  padding: .2rem 1rem .6rem;
+  background-color: #b275ef;
   color: #fefefe;
   font-size: 2.3em;
   font-weight: bold;
+  line-height: 1.2;
   letter-spacing: 2.4px;
 }
 
@@ -626,8 +623,17 @@ body {
     background: none;
   }
 
+  .home-text {
+    font-size: 1.3rem;
+    margin: 13rem 0;
+  }
+
   .home-text__title strong {
     display: block;
+  }
+
+  .home-text__btn {
+    margin-top: 3rem;
   }
 }
 

@@ -41,18 +41,18 @@ a
     width: 100%
 
 .btn
-  background: linear-gradient(#6ade4b, #10ae50)
+  background: #10ae50
   border: none
   padding: 2.5rem 6rem
   +roboto-bold
+  font-size: 1.6rem
   color: white
   letter-spacing: .1rem
   cursor: pointer
   transition: .3s ease
-  &:hover
-    background: linear-gradient(lighten(#6ade4b, 5), lighten(#10ae50, 5))
-    box-shadow: 0 0 7px rgba(0, 0, 0, .4)
-    //
+  &:hover,
+  &:focus
+    background: lighten(#10ae50, 5)
 
 
 html
@@ -61,6 +61,7 @@ html
 body
   background-color: #f0eff7
   font-size: 1.8rem
+  +roboto-bold
   color: #15081e
   min-width: 320px
   overflow-x: hidden
