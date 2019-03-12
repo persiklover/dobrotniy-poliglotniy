@@ -1,4 +1,9 @@
 .header
+  position: absolute
+  z-index: 9
+  left: 0
+  top: 0
+  width: 100%
   &-wrap
     padding: 1.8rem 0
     display: flex
@@ -18,10 +23,10 @@
     +md
       flex-direction: column
       align-items: flex-start
+      font-size: 1.6rem
     +sm
       align-items: center
       margin-top: 2.5rem
-      font-size: 1.6rem
     &__link
       display: flex
       align-items: center
@@ -43,8 +48,7 @@
       margin-right: 1rem
 
 .logo
-  display: block
-  width: fit-content
+  display: inline-block
   text-align: center
   +oswald
   color: #300d49

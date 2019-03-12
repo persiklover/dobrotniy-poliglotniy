@@ -1,9 +1,11 @@
+$fonts: '../fonts/';
+
 @font-face {
   font-family: 'Oswald';
   src: local('Oswald Bold'),
        local('Oswald-Bold'),
-       url('Oswald-Bold.woff2') format('woff2'),
-       url('Oswald-Bold.woff') format('woff');
+       url($fonts + 'Oswald-Bold/Oswald-Bold.woff2') format('woff2'),
+       url($fonts + 'Oswald-Bold/Oswald-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
@@ -17,8 +19,8 @@
   font-family: 'Roboto';
   src: local('Roboto Bold'),
        local('Roboto-Bold'),
-       url('Roboto-Bold.woff2') format('woff2'),
-       url('Roboto-Bold.woff') format('woff');
+       url($fonts + 'Roboto-Bold/Roboto-Bold.woff2') format('woff2'),
+       url($fonts + 'Roboto-Bold/Roboto-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }

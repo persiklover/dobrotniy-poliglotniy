@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Oswald';
-  src: local("Oswald Bold"), local("Oswald-Bold"), url("Oswald-Bold.woff2") format("woff2"), url("Oswald-Bold.woff") format("woff");
+  src: local("Oswald Bold"), local("Oswald-Bold"), url("../fonts/Oswald-Bold/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold/Oswald-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: local("Roboto Bold"), local("Roboto-Bold"), url("Roboto-Bold.woff2") format("woff2"), url("Roboto-Bold.woff") format("woff");
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto-Bold/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold/Roboto-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -364,6 +364,32 @@ a {
   margin: 0 auto;
 }
 
+.btn {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6ade4b), to(#10ae50));
+  background: -webkit-linear-gradient(#6ade4b, #10ae50);
+  background: -o-linear-gradient(#6ade4b, #10ae50);
+  background: linear-gradient(#6ade4b, #10ae50);
+  border: none;
+  padding: 2.5rem 6rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: white;
+  letter-spacing: .1rem;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7ce261), to(#12c55b));
+  background: -webkit-linear-gradient(#7ce261, #12c55b);
+  background: -o-linear-gradient(#7ce261, #12c55b);
+  background: linear-gradient(#7ce261, #12c55b);
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+
 html {
   font-size: 10px;
 }
@@ -374,6 +400,14 @@ body {
   color: #15081e;
   min-width: 320px;
   overflow-x: hidden;
+}
+
+.header {
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .header-wrap {
@@ -432,10 +466,7 @@ body {
 }
 
 .logo {
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  display: inline-block;
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
@@ -449,6 +480,71 @@ body {
   font-size: 1.8rem;
 }
 
+.home {
+  position: relative;
+  z-index: 2;
+  background: url(../img/main-bg.jpg) no-repeat -15rem bottom/150rem;
+}
+
+.home::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 239, 247, 0.55);
+}
+
+.home-wrap {
+  padding-top: 7rem;
+  min-height: 100vh;
+  display: table;
+  width: 100%;
+  text-align: right;
+}
+
+.home-text-wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home-text {
+  display: inline-block;
+  text-align: center;
+  margin: 10rem 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.home-text__title {
+  margin: 0 0 1rem;
+  color: #15081e;
+  font-size: 3em;
+}
+
+.home-text__title strong {
+  color: #aa151b;
+}
+
+.home-text__subtitle {
+  display: inline-block;
+  padding: .2rem 1rem;
+  background-color: #beb9e1;
+  color: #fefefe;
+  font-size: 2.3em;
+  font-weight: bold;
+  letter-spacing: 2.4px;
+}
+
+.home-text__btn {
+  display: block;
+  margin: 5rem auto 0;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -456,6 +552,12 @@ body {
 
   .header-info__link {
     margin-right: 3rem;
+  }
+
+  .home {
+    background-position: 56% bottom;
+    -webkit-background-size: 150rem 150rem;
+    background-size: 150rem;
   }
 }
 
@@ -475,6 +577,7 @@ body {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    font-size: 1.6rem;
   }
 
   .header-info__link {
@@ -483,6 +586,18 @@ body {
 
   .header-info__link:last-child {
     margin-bottom: 0;
+  }
+
+  .home {
+    background-position: 37% bottom;
+  }
+
+  .home-wrap {
+    text-align: center;
+  }
+
+  .home-text {
+    font-size: 1.7rem;
   }
 }
 
@@ -505,7 +620,14 @@ body {
     -ms-flex-align: center;
     align-items: center;
     margin-top: 2.5rem;
-    font-size: 1.6rem;
+  }
+
+  .home {
+    background: none;
+  }
+
+  .home-text__title strong {
+    display: block;
   }
 }
 
